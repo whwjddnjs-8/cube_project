@@ -1,0 +1,143 @@
+header {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    
+}
+
+.header-wrapper {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    font-weight: 500;
+}
+
+.logo-area img {
+    width: 150px;
+    height: 50px;
+}
+
+.menu-area ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-area ul li {
+    padding: 0 30px;
+    cursor: pointer;
+    line-height: 50px;
+}
+
+.user-contact a {
+    line-height: 50px;
+    padding: 0 10px;
+    position: relative;
+    font-size: 15px;
+    font-family: var(--kor-font)
+}
+
+.user-contact a:before {
+    content: '';
+    background-color: var(--primary-color);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+}
+
+.menu-icon-area {
+    display: none;
+}
+
+.menu-icon-area i {
+    line-height: 50px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width : 1400px) {
+    .menu-area {
+        display: none;
+    }
+
+    .user-contact {
+        display: none;
+    }
+
+    .menu-icon-area {
+        display: block;
+    }
+}
+
+.header-right {
+    position: absolute;
+    padding: 30px 0;
+    right: -400px;
+    top: 0;
+    background-color: #fff;
+    color: #222;
+    width: 400px;
+    height: 100vh;
+    transition: 0.5s;
+    border-left: 1px solid #ddd;
+    z-index: 1002;
+    /* display: none; */
+}
+
+.header-right .close-area {
+    float: right;
+    margin-right: 12px;
+}
+
+.header-right .close-area i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header-right ul {
+    list-style: none;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    margin-top: 60px;
+}
+
+.header-right ul li {
+    font-size: 18px;
+    padding: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-right ul li:hover {
+    background-color: #eee;
+}
+
+.header-right ul li:after {
+    content: '\e93e';
+    font-family: xeicon;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.header-right .user-contact {
+    display: flex;
+    flex: 1;
+    font-size: 30px;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
