@@ -210,6 +210,7 @@ a {
 /* Slick arrow */
 .slick-prev {
     left: -47px !important;
+    transform: translateY(-25px) !important;
 }
 
 .slick-prev:before {

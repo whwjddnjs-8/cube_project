@@ -32,7 +32,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .body-wrapper {
@@ -50,6 +50,8 @@ body {
     padding-top: 70px;
     padding-bottom: 70px;
     background-color: rgb(31, 30, 30);
+    width: 100%;
+    overflow: hidden;
 }
 
 .scroll-parent {
@@ -197,7 +199,21 @@ body {
 }
 
 .twitter-area {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+@media (max-width : 1400px) {
+    .twitter-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width : 480px) {
+    .twitter-area {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .twitter-area .item {
@@ -205,10 +221,8 @@ body {
     border-radius: 8px;
     width: 320px;
     padding: 25px;
-    /* box-shadow: 0 0 20px var(--primary-color-opacity); */
     transition: 0.3s;
     cursor: pointer;
-    margin: 0 15px;
 }
 
 .twitter-area .item:hover {
@@ -217,6 +231,7 @@ body {
 
 .twitter-area .item .logo-area {
     display: flex;
+
 }
 
 .twitter-area .item .logo-area img {
