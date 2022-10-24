@@ -99,12 +99,12 @@ body {
 }
 
 .container {
-    width: 75%;
+    width: 70%;
     margin: auto;
 }
 
 .half-container {
-    width: 75%;
+    width: 70%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
