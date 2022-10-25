@@ -37,6 +37,116 @@
                 <i class="xi-bars menubar"></i>
             </div>
         </div>
+        <div class="header-menu-pan">
+            <!-- Company -->
+            <div class="menu-category">
+                <div class="category">
+                    <a href="#none">company info</a>
+                </div>
+                <div class="category">
+                    <a href="#none">greetings</a>
+                </div>
+                <div class="category">
+                    <a href="#none">history</a>
+                </div>
+                <div class="category">
+                    <a href="#none">organization</a>
+                </div>
+                <div class="category">
+                    <a href="#none">business area</a>
+                </div>
+                <div class="category">
+                    <a href="#none">cafe</a>
+                </div>
+                <div class="category">
+                    <a href="#none">ir</a>
+                </div>
+                <div class="category">
+                    <a href="#none">location</a>
+                </div>
+            </div>
+            <!-- Artist -->
+            <div class="menu-category">
+                <div class="category">
+                    <a href="#none">Jo kwon</a>
+                </div>
+                <div class="category">
+                    <a href="#none">btob</a>
+                </div>
+                <div class="category">
+                    <a href="#none">clc</a>
+                </div>
+                <div class="category">
+                    <a href="#none">pentagon</a>
+                </div>
+                <div class="category">
+                    <a href="#none">triple h</a>
+                </div>
+                <div class="category">
+                    <a href="#none">(g)-idle</a>
+                </div>
+                <div class="category">
+                    <a href="#none">lightsum</a>
+                </div>
+                <div class="category">
+                    <a href="#none">park sun young</a>
+                </div>
+                <div class="category">
+                    <a href="#none">kim jin woo</a>
+                </div>
+                <div class="category">
+                    <a href="#none">na in woo</a>
+                </div>
+                <div class="category">
+                    <a href="#none">yoo seon ho</a>
+                </div>
+                <div class="category">
+                    <a href="#none">seong you</a>
+                </div>
+                <div class="category">
+                    <a href="#none">kang se jung</a>
+                </div>
+                <div class="category">
+                    <a href="#none">baek seo e</a>
+                </div>
+                <div class="category">
+                    <a href="#none">moon su young</a>
+                </div>
+                <div class="category">
+                    <a href="#none">park mi sun</a>
+                </div>
+                <div class="category">
+                    <a href="#none">lee hwee jae</a>
+                </div>
+                <div class="category">
+                    <a href="#none">lee sang jun</a>
+                </div>
+                <div class="category">
+                    <a href="#none">kim kyung ah</a>
+                </div>
+                <div class="category">
+                    <a href="#none">yeon yerim</a>
+                </div>
+                <div class="category">
+                    <a href="#none">lee eun ji</a>
+                </div>
+                <div class="category">
+                    <a href="#none">hyejidaeji</a>
+                </div>
+                <div class="category">
+                    <a href="#none">moon su in</a>
+                </div>
+                <div class="category">
+                    <a href="#none">jung ji woo</a>
+                </div>
+            </div>
+            <!-- Artist -->
+            <div class="menu-category">
+                <div class="category">
+                    <a href="#none">Music Video</a>
+                </div>
+
+            </div>
     </header>
     <div class="body-wrapper">
         <div class="body-content">
@@ -313,6 +423,30 @@
             $('.header-right').css('right', '-400px')
         })
 
+        $('.menu-area ul > li').mouseenter(function () {
+            $('header').css({ paddingBottom: '0' })
+            $('.header-menu-pan').css({ display: 'block' })
+            let menu_i = $(this).index();
+
+            if (menu_i < 3) {
+                $('.menu-category').css({
+                    display: 'none'
+                }).eq($(this).index()).css({
+                    display: 'grid'
+                })
+            }
+        });
+
+        $('.header-menu-pan').mouseleave(function () {
+            $('.header-menu-pan').css({ display: 'none' })
+            let menu_i = $(this).index();
+
+            if (menu_i < 3) {
+                $('.menu-category').eq($(this).index()).css({
+                    display: 'none'
+                })
+            }
+        })
 
 
         $('.video-area').slick({
