@@ -140,16 +140,84 @@
                     <a href="#none">jung ji woo</a>
                 </div>
             </div>
-            <!-- Artist -->
+            <!-- MultiMedia -->
             <div class="menu-category">
                 <div class="category">
                     <a href="#none">Music Video</a>
                 </div>
-
             </div>
+        </div>
     </header>
+
     <div class="body-wrapper">
         <div class="body-content">
+            <div class="right-menu-pan">
+                <div class="close-btn">
+                    <i class="xi-close"></i>
+                </div>
+                <ul class="right-menu">
+                    <li>
+                        <a class="menu" href="#none">COMPANY
+                            <i class="xi-angle-down-min"></i>
+                        </a>
+
+                        <div id="company" class="sub-items">
+                            <a href="#none">company info</a>
+                            <a href="#none">greetings</a>
+                            <a href="#none">history</a>
+                            <a href="#none">organization</a>
+                            <a href="#none">business area</a>
+                            <a href="#none">cafe</a>
+                            <a href="#none">ir</a>
+                            <a href="#none">location</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="menu" href="#none">ARTISTS<i class="xi-angle-down-min"></i></a>
+
+                        <div id="artist" class="sub-items">
+                            <a href="#none">Jo kwon</a>
+                            <a href="#none">btob</a>
+                            <a href="#none">clc</a>
+                            <a href="#none">pentagon</a>
+                            <a href="#none">triple h</a>
+                            <a href="#none">(g)-idle</a>
+                            <a href="#none">lightsum</a>
+                            <a href="#none">park sun young</a>
+                            <a href="#none">kim jin woo</a>
+                            <a href="#none">na in woo</a>
+                            <a href="#none">yoo seon ho</a>
+                            <a href="#none">seong you</a>
+                            <a href="#none">kang se jung</a>
+                            <a href="#none">baek seo e</a>
+                            <a href="#none">moon su young</a>
+                            <a href="#none">park mi sun</a>
+                            <a href="#none">lee hwee jae</a>
+                            <a href="#none">lee sang jun</a>
+                            <a href="#none">kim kyung ah</a>
+                            <a href="#none">yeon yerim</a>
+                            <a href="#none">lee eun ji</a>
+                            <a href="#none">hyejidaeji</a>
+                            <a href="#none">moon su in</a>
+                            <a href="#none">jung ji woo</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="menu" href="#none">MULTIMEDIA
+                            <i class="xi-angle-down-min"></i>
+                        </a>
+                        <div class="sub-items">
+                            <a href="#none">music video</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none">AUDITION</a>
+                    </li>
+                    <li>
+                        <a href="#none">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
             <div class="scroll-parent-background">
                 <div class="scroll-parent">
                     <div class="scroll-element primary">
@@ -367,17 +435,20 @@
                 <button onclick="scrollToTop()"><i class="xi-arrow-up"></i></button>
             </div>
             <div class="footer-area">
-                <div class="footer-sns">
-                    <a href="https://twitter.com/cubeunited"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.youtube.com/user/theunitedcube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.facebook.com/UNITEDCUBE"><i class="fa-brands fa-facebook"></i></a>
+                <div class="footer-content-area">
+                    <div class="footer-sns">
+                        <a href="https://twitter.com/cubeunited"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/user/theunitedcube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/UNITEDCUBE"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div class="footer-info">
+                        <p>7F, 83, ACHASAN-RO, SEONGDONG-GU, SEOUL, 04793 KOREA TEL : 82- 2-3445-1045
+                            <span>COPYRIGHT (C)
+                                CUBE-ENTERTAINMENT INC, ALL RIGHT RESERVED.</span>
+                        </p>
+                    </div>
                 </div>
-                <div class="footer-info">
-                    <p>7F, 83, ACHASAN-RO, SEONGDONG-GU, SEOUL, 04793 KOREA TEL : 82- 2-3445-1045
-                        <span>COPYRIGHT (C)
-                            CUBE-ENTERTAINMENT INC, ALL RIGHT RESERVED.</span>
-                    </p>
-                </div>
+
             </div>
         </footer>
     </div>
@@ -416,19 +487,20 @@
         });
 
         $('.menubar').click(function () {
-            $('.header-right').css('right', '0')
+            $('.right-menu-pan').css('right', '0')
         })
 
-        $('.close-menubar').click(function () {
-            $('.header-right').css('right', '-400px')
+        $('.xi-close').click(function () {
+            $('.right-menu-pan').css('right', '-300px')
         })
 
         $('.menu-area ul > li').mouseenter(function () {
-            $('header').css({ paddingBottom: '0' })
-            $('.header-menu-pan').css({ display: 'block' })
             let menu_i = $(this).index();
 
+            $('.header-menu-pan').css({ display: 'none' })
             if (menu_i < 3) {
+                $('header').css({ paddingBottom: '0' })
+                $('.header-menu-pan').css({ display: 'block' })
                 $('.menu-category').css({
                     display: 'none'
                 }).eq($(this).index()).css({
@@ -448,6 +520,13 @@
             }
         })
 
+        $('.right-menu li .menu').click(function () {
+            $('.sub-items').slideUp()
+
+            if ($(this).siblings().css('display') == 'none') {
+                $(this).next().slideDown()
+            }
+        })
 
         $('.video-area').slick({
             arrows: true,

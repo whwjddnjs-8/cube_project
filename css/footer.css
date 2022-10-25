@@ -10,8 +10,14 @@ footer {
 .footer-area {
     width: inherit;
     text-align: center;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 140px;
+}
+
+.footer-content-area {
+    padding-bottom: 30px;
 }
 
 .footer-sns a i {
@@ -44,7 +50,7 @@ footer {
     border: none;
     position: fixed;
     right: 60px;
-    bottom: 60px;
+    bottom: 50px;
     font-size: 36px;
     border-radius: 50%;
     width: 50px;
@@ -75,6 +81,7 @@ footer {
     }
 
 }
+
 
 /* @media (min-width : 768px) and (max-width : 1400px) */
 /* @media (max-width : 767px) */
