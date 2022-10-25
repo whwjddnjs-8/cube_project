@@ -93,7 +93,7 @@ a {
 }
 
 .mb200 {
-    margin-bottom: 200px !important;
+    margin-bottom: 180px !important;
 }
 
 .title-area {
@@ -138,6 +138,18 @@ a {
     font-size: 25px;
     margin-left: 8px;
     color: var(--twitter-color-code);
+}
+
+/* Mobile */
+@media (max-width : 768px) {
+    .home-title {
+        font-size: 24px;
+    }
+
+    .home-title:before {
+        width: 6px;
+        height: 25px;
+    }
 }
 
 /* PopUp */
@@ -205,6 +217,18 @@ a {
 
 .main-table td a {
     position: relative;
+    display: inline-block;
+    width: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-weight: 600;
 }
 
 /* Slick arrow */

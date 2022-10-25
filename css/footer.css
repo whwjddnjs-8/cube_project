@@ -1,17 +1,17 @@
 footer {
     background-color: #f8f8f8;
-    padding: 25px 0;
     width: 100%;
     position: absolute;
     bottom: 0;
-    height: 150px;
     left: 0;
+    height: auto;
 }
 
 .footer-area {
-    width: auto;
+    width: inherit;
     text-align: center;
     margin: auto;
+    height: 140px;
 }
 
 .footer-sns a i {
@@ -20,13 +20,24 @@ footer {
     color: #444;
 }
 
+.footer-info {
+    width: 100%;
+}
+
 .footer-info p {
+    display: block;
+    margin: auto;
     font-size: 12px;
     color: #ccc;
 }
 
 .footer-info p span {
     display: block;
+}
+
+.scrollup {
+    width: 20px;
+    height: 20px;
 }
 
 .scrollup button {
@@ -45,4 +56,20 @@ footer {
     opacity: 0;
     transition: 0.3s;
     cursor: pointer;
+}
+
+/* Pad & Mobile */
+@media (max-width : 1400px) {
+    .footer-info p {
+        width: 70%;
+    }
+
+    .scrollup button {
+        right: 15px;
+        bottom: 15px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
 }
