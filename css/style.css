@@ -101,6 +101,7 @@ body {
 /* Pad */
 @media (min-width : 768px) and (max-width : 1400px) {
     .scroll-parent {
+        width: 3220px;
         height: 290px;
     }
 
@@ -212,19 +213,19 @@ body {
 /* Mobile */
 @media (max-width : 767px) {
     .album-area {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .album-area .album img {
-        width: 80%;
+        width: 100%;
     }
 
     .album-area .album p {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .album-area .album p span {
-        font-size: 18px;
+        font-size: 15px;
     }
 }
 
@@ -284,12 +285,21 @@ body {
         font-size: 25px;
     }
 
+    .slick-prev {
+        left: -27px !important;
+        transform: translateY(-25px) !important;
+    }
+
     .slick-prev:before {
         font-size: 32px !important;
     }
 
     .slick-next:after {
         font-size: 32px;
+        position: absolute;
+        top: 2px;
+        left: -13px;
+
     }
 }
 
@@ -299,17 +309,6 @@ body {
     gap: 15px;
 }
 
-@media (max-width : 1400px) {
-    .twitter-area {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width : 480px) {
-    .twitter-area {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
 
 .twitter-area .item {
     border: 1px solid #ddd;
@@ -318,6 +317,7 @@ body {
     padding: 25px;
     transition: 0.3s;
     cursor: pointer;
+    position: relative;
 }
 
 .twitter-area .item:hover {
@@ -326,7 +326,6 @@ body {
 
 .twitter-area .item .logo-area {
     display: flex;
-
 }
 
 .twitter-area .item .logo-area img {
@@ -352,7 +351,9 @@ body {
 .twitter-area .comment-area {
     margin-top: 15px;
     font-size: 17px;
-    max-width: 300px;
+    width: 100%;
+    margin: auto;
+    margin: 50px 0;
 }
 
 .twitter-area .comment-area .comment a {
@@ -397,4 +398,35 @@ body {
     margin-top: 20px;
     font-size: 15px;
     color: #bbb;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 20px;
+}
+
+@media (min-width : 768px) and (max-width : 1400px) {
+    .twitter-area .comment-area {
+        margin: 50px 0;
+    }
+
+    .twitter-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width : 767px) {
+    .twitter-area .comment-area {
+        margin: 30px 0;
+    }
+
+    .twitter-area {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .twitter-area .image-area img {
+        height: 80%;
+    }
+
+    .twitter-area .date {
+        font-size: 13px;
+    }
 }
