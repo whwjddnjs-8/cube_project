@@ -151,12 +151,13 @@ body {
 }
 
 .container {
-    width: 70%;
+    max-width: 1310px;
     margin: auto;
+    
 }
 
 .half-container {
-    width: 70%;
+    max-width: 1310px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
